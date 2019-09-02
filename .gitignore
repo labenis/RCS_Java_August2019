@@ -22,3 +22,17 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /Day2_loops/nbproject/private/
+/Day2_loops/build/
+/Day2_loops/dist/
+/TrainingGround/nbproject/private/
+/TrainingGround/build/
+/TrainingGround/dist/
+/Day3/nbproject/private/
+/Day3/build/
+/Day3/dist/
+/Day4_Classes2/nbproject/private/
+/Day4_Classes2/build/
+/Day4_Classes2/dist/
+/Kalkulators/nbproject/private/
+/Kalkulators/build/
+/Kalkulators/dist/
