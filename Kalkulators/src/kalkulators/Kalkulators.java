@@ -21,10 +21,10 @@ public class Kalkulators {
         
         Scanner sc = new Scanner(System.in);
         System.out.println("Ievadiet Pirmo SKAITLI");
-        double a = sc.nextInt();
+        double a = sc.nextDouble();
         
         System.out.println("Ievadiet otro SKAITLI");
-        double b = sc.nextInt();
+        double b = sc.nextDouble();
         
         Darbibas tsk = new Darbibas();
         tsk.skaitluVertibas(a,b); 
@@ -40,15 +40,22 @@ public class Kalkulators {
             case 1:
                 tsk.summa();
                 System.out.println("Summa ir " + tsk.summa());
+                break;
             case 2:
                 tsk.atnemsana();
                 System.out.println("Atlikums ir " + tsk.atnemsana());
+                break;
             case 3:
                 tsk.reizinajums();
                 System.out.println("Reizinajums ir " + tsk.reizinajums());
+                break;
             case 4:
                 tsk.dalisana();
-                System.out.println("Dalijums ir " + tsk.dalisana());   
+                System.out.println("Dalijums ir " + tsk.dalisana());
+                break;
+            default:
+                System.out.println("Nepareza DARBIBA " ); 
+                break;
         
         }
         
