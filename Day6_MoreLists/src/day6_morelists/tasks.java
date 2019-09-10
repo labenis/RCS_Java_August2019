@@ -5,6 +5,11 @@
  */
 package day6_morelists;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -29,7 +34,10 @@ public class tasks {
             System.out.println("2- Pievienot elementu");
             System.out.println("3- dzest elementu");
             System.out.println("4- Redigjet elementu");
-            System.out.println("5- Iziet no programmas");
+            System.out.println("5- Nolasit Elementus no Faila");
+            System.out.println("6- Uztaisit Failu ar Esoso sarakstu");
+            System.out.println("7- Iziet no programmas");
+            
             String menu = sc.next();
 
             switch (menu) {
@@ -46,6 +54,22 @@ public class tasks {
                     editList(sampleList);
                     break;
                 case "5":
+                    uploadFile(sampleList);
+                    break;
+                case "6":
+                    System.out.println("A - Pievienot Elmentus");
+                    System.out.println("B - Overwrite Failu");
+                    String file = sc.next();
+                    switch (file) {
+                        case "A":
+                            addToFile(sampleList);
+                            break;
+                        case"B":
+                            createFile(sampleList);
+                            break;
+                    }
+                    break;
+                case "7":
                     System.exit(0);
                     break;
                 default:
@@ -111,5 +135,55 @@ public class tasks {
         }
 
     }
+    
+    private static void uploadFile(ArrayList<String> passList) {
+         try (FileReader fr = new FileReader("C:\\Users\\darta\\OneDrive\\Desktop\\Riga Coding School\\test.txt");
+                BufferedReader br = new BufferedReader(fr)){
+           while(true){
+               String line = br.readLine();
+               if(line==null){
+                   break;
+               }
+               passList.add(line);
+               System.out.println();
+           }
+            
+        }catch (IOException ex) {
+            System.out.println("Nav tada faila");
+        }
+    }
+    
+    private static void createFile(ArrayList<String> passList) {
+        try (FileWriter writer = new FileWriter("C:\\Users\\darta\\OneDrive\\Desktop\\Riga Coding School\\test2.txt");
+                BufferedWriter bw = new BufferedWriter(writer)) {
+
+            for (int i = 0; i < passList.size(); i++) {
+                bw.write(passList.get(i));
+                bw.newLine();
+            
+            }
+              //bw.write(passList);
+
+        } catch (IOException ex) {
+            System.out.println("Nevar izveidot fail");
+        }
+    }
+    
+        private static void addToFile(ArrayList<String> passList) {
+        try (FileWriter writer = new FileWriter("C:\\Users\\darta\\OneDrive\\Desktop\\Riga Coding School\\test2.txt",true);
+                BufferedWriter bw = new BufferedWriter(writer)) {
+
+            for (int i = 0; i < passList.size(); i++) {
+                bw.write(passList.get(i));
+                bw.newLine();
+            
+            }
+              //bw.write(passList);
+
+        } catch (IOException ex) {
+            System.out.println("Nevar izveidot fail");
+        }
+    }
+    
 
 }
