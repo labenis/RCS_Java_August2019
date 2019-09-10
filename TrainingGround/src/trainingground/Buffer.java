@@ -5,6 +5,7 @@
  */
 package trainingground;
 
+import java.awt.Color;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -14,7 +15,36 @@ import java.io.IOException;
  *
  * @author darta
  */
+
+
+
 public class Buffer {
+    
+  
+    
+ public static void newTest(){
+      
+     boolean boovar = false;
+     boolean hoovar = true;
+     boolean doovar = false;
+     boolean[] four = {boovar,hoovar ,doovar};
+     
+//    int blueInt = (boovar) ? 1 : 0;
+//   int redInt = (hoovar) ? 1 : 0;
+
+     int result = 0;
+     for (boolean bit : four) {
+         result <<= 1;
+         if (bit) {
+             result += 1;
+         }
+     }
+
+     System.out.println(result);
+   
+ }
+   
+    
     
     public static void bufferWriter(){
        BufferedWriter bw = null;
@@ -48,6 +78,10 @@ public class Buffer {
 	    }
 	} 
         
+    }
+
+    private static int booleanToInt(boolean stateBlue) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -23,7 +23,9 @@ public class TrainingGround {
 //     */
 public static void main(String[] args) {
     
-     Buffer.bufferWriter();
+     Buffer.newTest();
+    
+   //  Buffer.bufferWriter();
 //        // TODO code application logic here
 //        //biggestnumber();
 //        power();

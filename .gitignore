@@ -47,3 +47,7 @@ hs_err_pid*
 /Day7_Exceptions/dist/
 /Day7_GUI/nbproject/private/
 /Day7_GUI/build/
+/Day8_MoreGUI/nbproject/private/
+/Day8_MoreGUI/build/
+/Day8_MoreGUI/dist/
+/Day9_FileIOExample/nbproject/private/
